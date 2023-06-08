@@ -6,19 +6,16 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-
 
 export default {
   name: 'App',
   setup(){
-    let sum = ref(0)
-    let msg = ref('你好啊')
-    let person = reactive({
-      name: '张三',
-      age: 18
-    })
-
+    let name='张三'
+    let age='18'
+    
+    function sayHello(){
+      console.log(`我是${name},我${age}岁了，你好啊`);
+    }
     return {
       name,
       age,
